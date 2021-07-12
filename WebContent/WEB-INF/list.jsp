@@ -37,13 +37,20 @@
 				<td>이름</td>
 				<td><%=personList.get(i).getName() %></td>
 			</tr>
+			
 			<tr>
 				<td>핸드폰</td>
 				<td><%=personList.get(i).getHp() %></td>
 			</tr>
+			
 			<tr>
 				<td>회사</td>
 				<td><%=personList.get(i).getCompany() %></td>
+			</tr>
+			
+			<tr>
+					<td><a href="/phonebook2/pbc?action=uForm&id=<%=personList.get(i).getPersonId()%>">[수정]</a></td>
+					<td><a href="/phonebook2/pbc?action=delete&id=<%=personList.get(i).getPersonId()%>">[삭제]</a></td>
 			</tr>
 		</table>
 		<br>
