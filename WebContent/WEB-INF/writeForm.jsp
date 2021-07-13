@@ -21,7 +21,7 @@
 		<input type="hidden" name="action" value="insert"> <br>
 		<button type="submit">등록</button>
 	</form>
-	
+	<a href="http://localhost:8088/phonebook2/list.jsp">리스트 바로가기</a>
 	
 </body>
 </html>

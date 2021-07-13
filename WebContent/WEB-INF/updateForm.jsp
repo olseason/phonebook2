@@ -5,17 +5,9 @@
 <%@ page import="com.javaex.vo.PersonVo" %>
 
 <%
-   PhoneDao phoneDao = new PhoneDao();   
-   //id추출
-   String id = request.getParameter("id");
-   int personId = Integer.parseInt(id);
-   System.out.println(personId);
-   
-   //dao 에서 한사람(id)의 정보 가져오기
-   PersonVo personVo = phoneDao.getPerson(personId);
-   System.out.println(personVo.toString());
-   
-   //person+html 작성
+PersonVo personVo = (PersonVo)request.getAttribute("pVo");
+
+System.out.println(personVo);
    
 %>
 
@@ -33,9 +25,9 @@
       이름: <input type="text" name="name" value="<%=personVo.getName()%>"> <br>
       핸드폰: <input type="text" name="hp" value="<%=personVo.getHp()%>"> <br>
       회사: <input type="text" name="company" value="<%=personVo.getCompany()%>"> <br>
-      <input type="hidden" name="id" value="<%=personVo.getPersonId() %>"> <br>
-      
-      <button type="submit">수정</button>
+		   <input type="hidden" name="id" value="<%=personVo.getPersonId() %>">
+		   <input type="text" name="action" value="update">
+		   <button type="submit">등록</button>
    </form>
    
 

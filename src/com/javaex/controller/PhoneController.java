@@ -95,8 +95,15 @@ public class PhoneController extends HttpServlet {
 		}else if("uform".equals(action)) {
 			System.out.println("[수정폼]");
 
-
-			// Controller와 updateForm.jsp 포워드
+			
+			int iNo = Integer.parseInt(request.getParameter("id"));
+			
+			PhoneDao phoneDao = new PhoneDao();
+			PersonVo personVo = phoneDao.getPerson(iNo);
+			
+			request.setAttribute("pVo", personVo);
+			
+			//포워드하기
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/updateForm.jsp");
 			rd.forward(request, response);
 			
