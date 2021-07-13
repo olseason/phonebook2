@@ -49,7 +49,7 @@
 			</tr>
 			
 			<tr>
-					<td><a href="/phonebook2/pbc?action=uForm&id=<%=personList.get(i).getPersonId()%>">[수정]</a></td>
+					<td><a href="/phonebook2/pbc?action=uform&id=<%=personList.get(i).getPersonId()%>">[수정]</a></td>
 					<td><a href="/phonebook2/pbc?action=delete&id=<%=personList.get(i).getPersonId()%>">[삭제]</a></td>
 			</tr>
 		</table>

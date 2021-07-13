@@ -49,14 +49,14 @@ public class PhoneController extends HttpServlet {
 			RequestDispatcher rd =request.getRequestDispatcher("/WEB-INF/list.jsp");
 			rd.forward(request, response);
 			
-		/*글쓰기폼========================================================================*/	
+		/*저장폼========================================================================*/	
 		}else if("wform".equals(action)) {
 			//System.out.println("[글쓰기폼]");
 			
 			// writeFrom.jsp 포워드   --> 데이터X
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/writeForm.jsp");
 			rd.forward(request, response);
-			
+		/*저장========================================================================*/	
 		}else if("insert".equals(action)) {
 			System.out.println("[저장]");
 			
